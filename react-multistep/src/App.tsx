@@ -1,8 +1,11 @@
+import { AccountForm } from "./AccountForm";
+import { AddressForm } from "./AddressForm";
 import { useMultistepForm } from "./useMultistepForm";
+import { UserForm } from "./UserForm";
 
 function App() {
   const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next } =
-    useMultistepForm([<div>One</div>, <div>Two</div>]);
+    useMultistepForm([<UserForm />, <AddressForm />, <AccountForm />]);
 
   return (
     <div
